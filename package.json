@@ -10,6 +10,8 @@
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
     "lint": "eslint .",
     "test": "NODE_ENV=test jest --verbose --runInBand",
+    "test:jest": "NODE_ENV=test jest --verbose --maxWorkers=2",
+    "coverage": "jest --collectCoverage",
     "start:test": "NODE_ENV=test node index.js"
   },
   "author": "Adrian",
