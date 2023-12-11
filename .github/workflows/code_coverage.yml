@@ -16,7 +16,6 @@ jobs:
       
             - name: Install Dependencies
               run: |
-                npm install
                 npm run coverage
               env:
                 NODE_ENV: test
