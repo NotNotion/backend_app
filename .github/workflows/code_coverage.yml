@@ -9,9 +9,6 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout Repository
-              uses: actions/checkout@v2
-      
             - name: Set Up Node.js
               uses: actions/setup-node@v3
               with:
@@ -19,7 +16,8 @@ jobs:
       
             - name: Install Dependencies
               run: npm install --force
-      
+              env:
+                NODE_ENV: test
             - uses: actions/checkout@v3
             - uses: ArtiomTr/jest-coverage-report-action@v2
 
