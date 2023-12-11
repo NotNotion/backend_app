@@ -15,7 +15,9 @@ jobs:
                 node-version: 16.x
       
             - name: Install Dependencies
-              run: npm install --force
+              run: |
+                npm install --force
+                npm run coverage
               env:
                 NODE_ENV: test
             - uses: actions/checkout@v3
