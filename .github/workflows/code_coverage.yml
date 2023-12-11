@@ -17,9 +17,6 @@ jobs:
               with:
                 node-version: 16.x
       
-            - name: Install Dependencies
-              run: npm install
-      
             - name: Run Tests and Code Coverage
               run: npm run coverage
 
