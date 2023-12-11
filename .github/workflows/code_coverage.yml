@@ -8,20 +8,14 @@ jobs:
     run-script:
         runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout Repository
-              uses: actions/checkout@v2
-      
+        steps:      
             - name: Set Up Node.js
               uses: actions/setup-node@v3
               with:
                 node-version: 16.x
       
-            - name: Install Dependencies
-              run: npm install --force
-      
-            - name: Run Tests and Code Coverage
-              run: npm run coverage
+            - uses: actions/checkout@v3
+            - uses: ArtiomTr/jest-coverage-report-action@v2
 
         
 
