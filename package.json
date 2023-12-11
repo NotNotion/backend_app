@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "test": "NODE_ENV=test jest --verbose --runInBand",
     "test:jest": "NODE_ENV=test jest --verbose --maxWorkers=2",
-    "coverage": "jest --collectCoverage",
+    "coverage": "NODE_ENV=test jest --verbose --runInBand --collectCoverage",
     "start:test": "NODE_ENV=test node index.js"
   },
   "author": "Adrian",
